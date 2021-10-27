@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Test3{% endblock %}
+
+{% block body %}
+
+ <h1>Liste des étudiants</h1>
+    {% if etudiants %}
+    <ul>
+        {% for etud in etudiants %}
+            <li>{{ etud }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}
+
+
+
+
+    
+    

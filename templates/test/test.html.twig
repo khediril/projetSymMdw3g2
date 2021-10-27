@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Test{% endblock %}
+
+{% block body %}
+
+ Vous etes dans la page test
+ <a href="{{ path('test3') }}">aller à la page test3</a>
+ <a href="{{ path('test4',{'name':'foulen'}) }}">aller à la page test4</a>
+
+
+{% endblock %}
