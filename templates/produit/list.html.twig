@@ -3,10 +3,38 @@
 {% block title %}Hello ProduitController!{% endblock %}
 
 {% block body %}
-   <ul>
+<div class="container">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">NOM</th>
+       <th scope="col">Détail</th>
+       <th scope="col">Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    
+  
    {% for produit in produits %}
-      <li> {{ produit.nom }}</li>
       
+      <tr>
+      <th scope="row">{{ produit.id }}</th>
+      <td>{{ produit.nom }}</td>
+      <td><a href="{{ path('produit_detail',{'id':produit.id})}}">Voir Détail</a></td>
+       <td><a href="{{ path('produit_delete',{'id':produit.id})}}">Supprimer
+    </tr>
    {% endfor %}
-   </ul>
+   </tbody>
+   </table>
+</div>
+
+
+
+
+
+
 {% endblock %}
+
+  
